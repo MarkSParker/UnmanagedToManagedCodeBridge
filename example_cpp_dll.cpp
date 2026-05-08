@@ -461,7 +461,7 @@ extern "C" void __declspec(dllexport) GetError(MANAGED_LIBRARY_HANDLE hManagedLi
 	{
 		//	Convert the handle to managed object address
 		IntPtr ip(hManagedLibrary);
-		ManagedLibrary^ managedLibrary = (managedLibrary^)GCHandle::FromIntPtr(ip).Target;
+		ManagedLibrary^ managedLibrary = (ManagedLibrary^)GCHandle::FromIntPtr(ip).Target;
 
 		//	Get error and convert to char*
 		char *ptr = (char*)(void*)Marshal::StringToHGlobalAnsi(managedLibrary->GetError());
