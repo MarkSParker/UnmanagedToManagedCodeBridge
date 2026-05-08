@@ -10,9 +10,9 @@
 //				legacy unmanaged C code, and enables it to call methods in a managed mode
 //				C# module.
 //
-//				Essentially this is mixed-mode join between unmanaged code and managed code when
+//				Essentially this is a mixed-mode join between unmanaged code and managed code when
 //				the unmanaged is calliing the managed. The context of the managed code is held in
-//				MANAGED_HANDLE which is returned from OpenManagedLibrary().
+//				MANAGED_LIBRARY_HANDLE which is returned from OpenManagedLibrary().
 //
 //				THIS DLL SHOULD BE INVOKED BY THE PARENT PROGRAM USING LoadLibraryA() OR EQUIVALENT
 //				AND Initialize() CALLED FIRST. THEN, WHEN FUNCTIONS ARE CALLED IN THIS DLL THE MATCHING
@@ -189,7 +189,7 @@ void sprintf_trunc(char *sBuffer, size_t sizBuffer, char *sFormat, ...)
 //	FUNCTION:	LocalLoader
 //
 //	PURPOSE:	This routine resolves and loads .NET assemblies which may not
-//				be where Windows would expect them such as the Amazon SDK files.
+//				be where Windows would expect them.
 //
 //				This example only looks in the current working directory, but more
 //				places could be added.
