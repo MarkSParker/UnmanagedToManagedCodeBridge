@@ -47,6 +47,7 @@ using namespace Bridge;									// defined in example_cs_dll.cs
 
 //	types
 typedef void*	MANAGED_LIBRARY_HANDLE;
+typedef BOOL	int										// for compatibility with plain-old-C (POC)
 
 //	Defines
 #define INVALID_MANAGED_LIBRARY_HANDLE	((MANAGED_LIBRARY_HANDLE) -1)
